@@ -4,10 +4,26 @@
  */
 package mephi.b23902.headhunters.heretic.sheadhunters;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Настя
  */
 public class Heretic {
-    
+
+    String name;
+    ArrayList<String> criminals;
+    String place;
+    int id;
+    String menace;
+
+    public Heretic(String name, ArrayList<String> criminals, String place, int id, String menace) {
+        this.name = name;
+        this.criminals = criminals;
+        this.place = place;
+        this.id = id;
+        this.menace = menace;
+    }
+
 }
