@@ -5,6 +5,7 @@
 package mephi.b23902.headhunters.heretic.sheadhunters;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  *
@@ -13,17 +14,18 @@ import java.util.ArrayList;
 public class Heretic {
 
     String name;
-    ArrayList<String> criminals;
+    ArrayList<String> criminals = new ArrayList<>(Arrays.asList("murder", "robbery", "bulglary"));
     String place;
     int id;
-    String menace;
+    ArrayList<String> menace = new ArrayList<>(Arrays.asList("low", "middle", "high", "critical"));
+    String crime;
+    String level;
 
-    public Heretic(String name, ArrayList<String> criminals, String place, int id, String menace) {
+    public Heretic(String name, long fakeCriminal, String place, int id, long fakeMenace) {
         this.name = name;
-        this.criminals = criminals;
         this.place = place;
         this.id = id;
-        this.menace = menace;
+        this.crime = criminals.get(fakeCriminal.intValue());
     }
 
 }
