@@ -10,29 +10,32 @@ import com.github.javafaker.Faker;
  *
  * @author Настя
  */
-
-
 public class DataGenerator {
+
     Faker faker = new Faker();
     String fakeName = faker.name().fullName();
     String fakePlace = faker.address().streetAddress();
-    long fakeCriminal = Math.round(Math.random()*2);
+    int fakeCriminal = (int) Math.round(Math.random() * 6);
     String fakeId = faker.idNumber().valid();
-    long fakeMenace = Math.round(Math.random()*3);
+    int fakeMenace = (int) Math.round(Math.random() * 3);
 
     public String getFakeName() {
         return fakeName;
     }
+
     public String getFakePlace() {
         return fakePlace;
     }
-    public long getFakeCriminal() {
+
+    public int getFakeCriminal() {
         return fakeCriminal;
     }
+
     public String getFakeId() {
         return fakeId;
     }
-    public long getFakeMenace() {
+
+    public int getFakeMenace() {
         return fakeMenace;
-    }   
+    }
 }

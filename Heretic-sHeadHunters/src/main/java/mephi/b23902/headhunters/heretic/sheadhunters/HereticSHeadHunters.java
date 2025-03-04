@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package mephi.b23902.headhunters.heretic.sheadhunters;
 
 /**
@@ -11,6 +10,11 @@ package mephi.b23902.headhunters.heretic.sheadhunters;
 public class HereticSHeadHunters {
 
     public static void main(String[] args) {
-        new DataGenerator().show();
+        Controller controller = new Controller();
+        controller.createHeretic();
+        controller.createHeretic();
+        controller.createHeretic();
+        controller.createHeretic();
+        new View(controller).setVisible(true);
     }
 }
